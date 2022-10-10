@@ -1,5 +1,5 @@
 import InputContainer from "../inputContainer/inputContainer"
-import ConditionRange from "../rangeController/RangeController"
+import RangeController from "../rangeController/RangeController"
 
 import "./conditionOption.scss"
 
@@ -10,9 +10,9 @@ const ConditionOption = ({ val, title, cash, perc }) => {
 			
 			<h3 className="conditionOption__title">{title}</h3>
 			
-			<div className="conditionOption__inputRangeContainer inputRangeContainer">
+			<div className="conditionOption__inputRangeContainer">
 				<InputContainer val={val}  cash = {cash} perc = {perc} />		
-				<ConditionRange val = {val} />
+				<RangeController val = {val} />
 			</div>
 
 		</div>

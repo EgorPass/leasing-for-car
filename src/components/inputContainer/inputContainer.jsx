@@ -1,25 +1,31 @@
-import "./inputContainer.scss"
 
-const ConditionInput = ({ val, cash, perc = null }) => {
-
+const CashOrPerc = ({ perc, cash }) => {
+	
 	return (
-
-		<div className = "inputRangeContainer__inputContainer inputContainer">
-
-			<div className= "inputContainer__input">
-				<input type="text" value={val} />
-				{perc ? (<span>{cash}</span>) : null}
-			</div>
-			
-			<div className = "inputContainer__description">
-				{perc ? `${perc}%` : cash}
-			</div>
-
-		</div>
+		<>
+			{perc ? (
+				<div className="conditionOption__perc">{perc}%</div>
+			)	:  !perc ? (<div className="conditionOption__description">{cash}</div> ) : null}
+		</>
 	)
 }
 
-export default ConditionInput
+const ConditionInput = ({ val, cash, perc = null }) => {
+  return (
+    <div className="conditionOption__inputContainer ">
+      <div className="conditionOption__inputField">
+				<input className="conditionOption__input" type="text" value={val} />
+
+        {perc ? (
+          <div className="conditionOption__description">{cash}</div>
+        ) : null}
+      </div>
+      <CashOrPerc perc={perc} cash={cash} />
+    </div>
+  );
+};
+
+export default ConditionInput;
 
 // возможно разбить на компоненты:
 // inputContainer__input & inputContainer__description

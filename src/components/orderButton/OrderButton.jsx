@@ -2,8 +2,8 @@
 const OrderButton = ({ title}) => {
 
 	return (
-    <button type="submit" className="orderAccept__button">
-			{ title }
+    <button type="submit" className="orderContainer__button">
+      {title}
     </button>
   );
 }

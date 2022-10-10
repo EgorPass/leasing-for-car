@@ -5,8 +5,8 @@ const ConditionContainer = () => {
 
 	return (
 		<section className="carCompany__conditionContainer">
-			<ConditionOption title="Стоимость автомобиля" val= { 1000000 } cash = "Р"/>
-			<ConditionOption title="Первоначальный взнос" val= { 200000 } cash="Р" perc={ 13 } />
+			<ConditionOption title="Стоимость автомобиля" val= {"1 000 000" } cash = "Р"/>
+			<ConditionOption title="Первоначальный взнос" val= { "200 000" } cash="Р" perc={ 13 } />
 			<ConditionOption title="Срок лизинга" val={ 40 } cash = "мес."/>
      </section>
 	)

@@ -2,19 +2,51 @@
 @import url("./fonts/Gilroy-Black/stylesheet.css");
 @import url("./fonts/Nekst-Black/stylesheet.css");
 
+
 .body {
-	&__carCompany {}
+	background-color: #fff;
+	overflow-y: auto;
+	width: 100vw;
+	height: 100vh;
+	
+	&__carCompany {
+		box-sizing: border-box;
+		// padding: 45px 20px;
+		box-sizing: border-box;
+		margin: 45px 20px;
+		width: 280px;
+		// border: 1px solid black;
+	}
 }
 
 .carCompany {
 
-	&__title {}
+	&__title {
+		margin: 20px 0 32px;
+	}
 
-	&__head {}
+	&__head {
+		font: 34px/1 'Nekst';
+		font-weight: 900;
+		color: #111;
+	}
 
-	&__conditionContainer {}
+	&__conditionContainer {
+		// border: 1px solid red;
+	}
 
-	&__conditionOption {}
+	&__conditionOption {
+		// box-sizing: border-box;
+		// width: 280px;
+		margin: 0 0 26px 0;
 
-	&__orderContainer {}
+		
+		// border: 1px solid blue;
+
+	}
+
+	&__orderContainer {
+		margin: 0 0 60px 0
+		//используем для позиционирования на сетку
+	}
 }

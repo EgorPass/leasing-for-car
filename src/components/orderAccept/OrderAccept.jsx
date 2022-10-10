@@ -1,10 +1,9 @@
 import OrderButton from "../orderButton/OrderButton";
 
-import "./orderAccept.scss"
 
 const OrderAccept = () => {
   return (
-    <div className="orderContainer__orderAccept orderAccept">
+    <div className="orderContainer__orderAccept">
       <OrderButton title="Оставить заявку" />
     </div>
   );

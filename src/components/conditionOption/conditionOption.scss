@@ -1,14 +1,84 @@
 .conditionOption {
+	font: 22px/1 "Nekst";
+	font-weight: 900;
+	color: #333E48;
 
-	&__title {}
 
-	&__inputRangeContainer {}
-}
+	&__title {
+		// border: 1px solid gray;
+		font: 14px 'Gilroy';
+		color: #333E48;
+		margin: 0 0 8px 0;
+	}
 
-.inputRangeContainer {
+	&__inputRangeContainer {
+		background-color: #F3F3F4;
+		border-radius: 16px;
+		padding: 20px 20px;
+		position: relative;
+	}
 
-	&__inputContainer {}
+	&__inputContainer {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		// align-items: center;
+		height: 20px;
+	}
 
-	&__rangeController {}
+	&__inputField {
+		display: flex;
+		flex-flow: row nowrap;
+		// align-items: center;
+	}
+
+	&__input {
+		padding: 0;
+		// margin: 0;
+		width: 100%;
+		height: 20px;
+		display: inline-block;
+
+		outline: none;
+		border:none;
+		// border: 1px solid blue;
+
+
+		font: 22px/1 "Nekst";
+		font-weight: 900;
+		color: #333E48;
+		background-color: transparent;
+
+	}
+
+	&__description {
+		height: 20px;
+		// border: 1px solid blue;
+	}
+
+	&__perc {
+		// border: 1px solid blue;
+		box-sizing: border-box;
+		box-sizing: border-box;
+		position: absolute;
+		right: 6px;
+		top: 6px;
+		border-radius: 12px;
+		padding: 14px 14px;
+		height: 48px;
+		width: 68px;
+
+
+		background-color: #E0E0E0;
+	}
+
+	&__rangeController {
+
+		left: 20px;
+		bottom: 0px;
+		height: 2px;
+		width: 240px;
+
+	}
 
 }

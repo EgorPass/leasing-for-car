@@ -2,9 +2,12 @@
 const OrderSum = ({title, sum, cash }) => {
 	
 	return (
-    <div className="orderCondition__orderSum">
-			<h3 className="orderCondition__title">{ title }</h3>
-			<div className="orderCondition__sum">{ sum }{ cash }</div>
+    <div className="orderContainer__orderSum">
+      <h3 className="orderContainer__title">{title}</h3>
+      <div className="orderContainer__sum">
+        {sum}
+        {cash}
+      </div>
     </div>
   );
 }
