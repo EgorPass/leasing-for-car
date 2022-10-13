@@ -3,82 +3,142 @@
 	font-weight: 900;
 	color: #333E48;
 
+	@media(min-width: 768px) {
+		font-size: 30px;
+	}
 
 	&__title {
-		// border: 1px solid gray;
 		font: 14px 'Gilroy';
 		color: #333E48;
 		margin: 0 0 8px 0;
+
+		@media(min-width: 768px) {
+			font-size: 16px;
+		}
 	}
 
 	&__inputRangeContainer {
-		background-color: #F3F3F4;
+		height: 60px;
+		border: 2px solid #F3F3F4;
 		border-radius: 16px;
-		padding: 20px 20px;
+		padding: 18px 20px;
 		position: relative;
+
+		@media(min-width: 768px) {
+			height: 68px;
+			padding: 16px 24px
+		}
+
+		&_passive {
+			background-color: #f3f3f4;
+		}
+
+		&_active {
+			background-color: #fff;
+			border: 2px solid #F3F3F4;
+		}
+
+		&__disabled {
+			background-color: rgba(243, 243, 244, 0.5);
+		}
 	}
 
 	&__inputContainer {
 		display: flex;
 		flex-flow: row nowrap;
-		justify-content: flex-start;
-		// align-items: center;
-		height: 20px;
+		justify-content: space-between;
 	}
 
 	&__inputField {
+		width: 100%;
 		display: flex;
 		flex-flow: row nowrap;
-		// align-items: center;
+		align-items: center;
 	}
 
 	&__input {
 		padding: 0;
-		// margin: 0;
 		width: 100%;
-		height: 20px;
 		display: inline-block;
 
 		outline: none;
-		border:none;
-		// border: 1px solid blue;
-
+		border: none;
 
 		font: 22px/1 "Nekst";
 		font-weight: 900;
 		color: #333E48;
 		background-color: transparent;
 
+		@media(min-width: 768px) {
+			font-size: 30px;
+		}
+
+		.conditionOption__inputRangeContainer_active & {
+			color: #575757
+		}
+
+		.conditionOption__inputRangeContainer_disabled & {
+			color: rgba(87, 87, 87, 0.508)
+		}
 	}
 
 	&__description {
-		height: 20px;
-		// border: 1px solid blue;
+			align-self: center;
+		.conditionOption__inputRangeContainer_active & {
+			color: #575757;
+		}
+
+		.conditionOption__inputRangeContainer_disabled & {
+			color: rgba(87, 87, 87, 0.508)
+		}
 	}
 
 	&__perc {
-		// border: 1px solid blue;
-		box-sizing: border-box;
-		box-sizing: border-box;
+		display: flex;
+		flex-flow: row nowrap;
 		position: absolute;
-		right: 6px;
-		top: 6px;
+		right: 4px;
+		top: 4px;
 		border-radius: 12px;
 		padding: 14px 14px;
 		height: 48px;
-		width: 68px;
+		width: 70px;
 
+		& .conditionOption__description {
+			align-self: flex-start;
+		}
+		
+		&~.conditionOption__description {
+			align-self: flex-start;
+		}
+
+		@media(min-width: 768px) {
+
+			top: 6px;
+
+			& input {
+				font-size: 20px;
+			}
+
+			& .conditionOption__description {
+				font-size: 20px;
+			}
+		}
 
 		background-color: #E0E0E0;
+
+		.conditionOption__inputRangeContainer_disabled & {
+			background-color: rgb(224, 224, 224, .5);
+		}
+
 	}
 
 	&__rangeController {
 
 		left: 20px;
-		bottom: 0px;
+		bottom: -2px;
 		height: 2px;
-		width: 240px;
-
+		width: calc(100% - 40px);
 	}
 
 }

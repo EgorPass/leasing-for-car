@@ -4,18 +4,31 @@
 
 
 .body {
+	user-select: none;
 	background-color: #fff;
 	overflow-y: auto;
 	width: 100vw;
 	height: 100vh;
-	
+
 	&__carCompany {
-		box-sizing: border-box;
-		// padding: 45px 20px;
+
 		box-sizing: border-box;
 		margin: 45px 20px;
-		width: 280px;
-		// border: 1px solid black;
+		width: auto;
+
+		@media(min-width: 768px) {
+			margin: 65px 36px;
+		}
+
+		@media(min-width: 1120px) {
+			max-width: 1024px;
+			margin: 213px auto;
+		}
+
+		@media(min-width: 1440px) {
+			max-width: 1345px;
+		}
+
 	}
 }
 
@@ -29,24 +42,61 @@
 		font: 34px/1 'Nekst';
 		font-weight: 900;
 		color: #111;
+
+		@media(min-width: 768px) {
+			font-size: 54px;
+		}
 	}
 
 	&__conditionContainer {
-		// border: 1px solid red;
+		display: flex;
+		flex-flow: column nowrap;
+
+		@media(min-width: 1120px) {
+			flex-flow: row nowrap;
+		}
 	}
 
 	&__conditionOption {
-		// box-sizing: border-box;
+		box-sizing: border-box;
 		// width: 280px;
+
 		margin: 0 0 26px 0;
 
-		
-		// border: 1px solid blue;
+		@media(min-width: 768px) {
+			margin: 0 0 32px 0;
+		}
 
+		@media(min-width: 1120px) {
+			min-width: 320px;
+			// max-width: 426px;
+			margin: 0 32px 50px 0;
+		}
+
+		@media(min-width: 1440px) {
+			min-width: 427px;
+			margin: 0 32px 44px 0;
+		}
+
+		&:last-of-type {
+			margin-right: 0;
+		}
 	}
 
 	&__orderContainer {
-		margin: 0 0 60px 0
+		width: 100%;
+		margin: 0 0 60px 0;
+		display: flex;
+		flex-flow: column nowrap;
+
+		@media(min-width: 768px) {
+			margin: 0 0 150px 0;
+		}
+
+		@media(min-width: 1120px) {
+			flex-flow: row nowrap;
+		}
+
 		//используем для позиционирования на сетку
 	}
 }

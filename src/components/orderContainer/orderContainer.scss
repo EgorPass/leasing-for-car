@@ -1,36 +1,130 @@
 .orderContainer {
 
-	&__orderCondition {}
+	&__orderCondition {
+		display: flex;
+		flex-flow: column nowrap;
 
-	&__orderAccept {}
+		@media(min-width: 768px) {
+			flex-flow: row nowrap;
+		}
+	}
+
+	&__orderAccept {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@media(min-width: 768px) {
+			justify-content: start;
+		}
+	}
 
 	&__orderSum {
+		
 		margin: 0 0 30px 0;
+
+		@media(min-width: 768px) {
+			margin: 0 32px 44px 0;
+			// width: 332px;
+		}
+
+		@media(min-width: 1120px) {
+			margin: 0 32px 0 0;
+			min-width: 320px;
+		}
+
+		@media(min-width: 1440px) {
+			min-width: 427px;
+		}
 	}
 
 	&__title {
 		font: 14px "Gilroy";
 		color: #333;
+
+		@media(min-width: 768px) {
+			font-size: 16px;
+		}
 	}
 
 	&__sum {
+		display: flex;
+			flex-flow: row nowrap;
+			align-items: center;
 		font: 22px "Nekst";
 		font-weight: 900;
 		color: #333;
+
+		@media(min-width: 768px) {
+			font-size: 54px;
+		}
 	}
 
-	&__button {
+	&__description {
+		align-self: flex-start;
+	}
+ 
+	&__button_active {
 
-		outline:  none;
+		outline: none;
+		border: none;
+		border-radius: 40px;
+
+		padding: 18px 51px 22px;
+		font: 22px "Nekst";
+		font-weight: 900;
+		color: #fff;
+		background-color: #FF9514;
+
+		&:hover {
+			background-color: #111111;
+		}
+
+		@media(min-width: 768px) {
+			font-size: 30px;
+			padding: 14px 52px 18px;
+			height: 68px
+		}
+
+		@media(min-width: 1120px) {
+			width: 320px;
+			padding: 14px 20px 18px;
+		}
+
+		@media(min-width: 1440px) {
+			min-width: 427px;
+		}
+
+
+	}
+
+	&__button_disabled {
+		outline: none;
 		border: none;
 		border-radius: 40px;
 
 		padding: 20px 50px;
-		font:  22px "Nekst";
+		font: 22px "Nekst";
 		font-weight: 900;
-		color: #fff;
-		background-color: #FF9514;
+		color: rgba(255, 255, 255, .5);
+		background-color: rgba(255, 149, 20, .5);
+
+		@media(min-width: 768px) {
+			font-size: 30px;
+			padding: 14px 52px 18px;
+			height: 68px
+		}
+
+		@media(min-width: 1120px) {
+			width: 320px;
+			padding: 14px 30px 18px;
+		}
+
+		@media(min-width: 1440px) {
+			min-width: 427px;
+		}
 	}
+
 
 
 }

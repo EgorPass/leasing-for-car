@@ -1,8 +1,9 @@
 .rangeController {
-		position: absolute;
-		overflow: visible;
+	position: absolute;
+	overflow: visible;
 
 	&__line {
+		position: relative;
 		height: 2px;
 		width: 100%;
 		background-color: #E1E1E1;
@@ -11,21 +12,29 @@
 	&__colorLine {
 		position: absolute;
 		bottom: 0;
+		left: 0;
 		height: 2px;
-		width: 100px;
 		background-color: #FF9514;
+
+		.conditionOption__inputRangeContainer_disabled & {
+			background-color: rgba(255, 149, 20, .8);
+		}
 
 	}
 
 	&__circle {
 
 		position: absolute;
-		left: 100px;
+		// left: 100px;
 		bottom: -9px;
 		border: none;
 		border-radius: 50%;
 		height: 20px;
 		width: 20px;
 		background-color: #FF9514;
+
+		.conditionOption__inputRangeContainer_disabled & {
+			background-color: rgb(232, 189, 136);
+		}
 	}
 }
